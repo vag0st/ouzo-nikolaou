@@ -1,0 +1,40 @@
+.product {
+  width: 50%;
+  height: 200px;
+  display: inline-block;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  overflow: hidden;
+}
+
+.product-image, .product-info {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.product-image {
+  transform: rotateY(0deg);
+}
+
+.product-info {
+  transform: rotateY(180deg);
+  background-color: #ccc;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  max-height: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.product:hover .product-image {
+  transform: rotateY(180deg);
+}
+
+.product:hover .product-info {
+  transform: rotateY(0deg);
+  max-height: 200px;
+}
