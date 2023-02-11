@@ -7,12 +7,14 @@ import Home from './components/Home/Home';
 import History from './components/History/History';
 import ContactUs from './components/ContactUs/ContactUs';
 import ProductsPage from './components/Products/Products';
+import AgeDisclaimer from './components/AgeDisclaimer/AgeDisclaimer';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <NavBar />
+      <AgeDisclaimer />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
